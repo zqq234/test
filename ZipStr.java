@@ -1,10 +1,4 @@
-/**
- * @className ZipStr
- * @Description TODO
- * @Author zhangqianqian
- * @Date 2019/12/3 18:33
- * @Version 1.0
- **/
+
 public class ZipStr {
     public static String func(String str){
         StringBuffer sb=new StringBuffer();
