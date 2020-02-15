@@ -38,11 +38,11 @@
         <td>1</td>
         <td>令狐冲</td>
         <td>男</td>
-        <td><a href="" onclick="delTr(this)">删除</a></td>
+        <td><a href="javascript:void(0)" onclick="delTr(this)">删除</a></td>
     </tr>
 </table>
 <script>
-    document.getElementById("btn-add").onclick=function(){
+    /*document.getElementById("btn-add").onclick=function(){
         var id=document.getElementById("id").value;
         var name=document.getElementById("name").value;
         var gender=document.getElementById("gender").value;
@@ -75,8 +75,21 @@
 
         var table=document.getElementsByTagName("table")[0];
         table.appendChild(tr);
-    }
+    }*/
+    document.getElementById("btn-add").onclick=function() {
+        var id = document.getElementById("id").value;
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
 
+        var table = document.getElementsByTagName("table");
+        table.innerHTML += "<tr>\n" +
+            "        <td>+id+</td>\n" +
+            "        <td>+name+</td>\n" +
+            "        <td>+gender+</td>\n" +
+            "        <td><a href=\"javascript:void(0)\" onclick=\"delTr(this)\">删除</a></td>\n" +
+            "    </tr>";
+
+    }
     function delTr(obj) {
         var table=obj.parentNode.parentNode.parentNode;
         var tr=obj.parentNode.parentNode;
